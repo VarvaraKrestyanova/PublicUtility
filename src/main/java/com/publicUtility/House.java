@@ -13,6 +13,7 @@ public class House {
         }
         //EXCEPTION
 
+
         float square = squareOneRoomFlat * flatsOneRoom + squareTwoRoomsFlat * flatsTwoRooms;
         publicUtilityValue = (flatsOneRoom * humansPerOneRoomFlat + flatsTwoRooms * humansPerTwoRoomsFlat) * (float) 1.5 + square * 2;  //obsluzhivanie lifta and utility per m^2
         System.out.println("Flats: " + flatsOneRoom + " one-room flats, " + flatsTwoRooms + " two-rooms flats. " + "The house's square is " + square + " square meters.");

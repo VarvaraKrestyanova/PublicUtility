@@ -45,7 +45,6 @@ public class MainClass {
         System.out.println("\n" + "Public utility of the street per month is " + streetPublicUnity + " rub.");
 
 
-
         //List<House> street = Arrays.asList(detachedHouse, twoStoryHouse, twoStoryHouse, fiveStoryHouse, fiveStoryHouse);
         //почему просит в ковычки поставить не тип значений, а название класса? потому что не примитивы?
         //System.out.println(new StringBuilder().append("\n").append("Public utility of the street per month is ").append(street).append(" rub.").toString());
