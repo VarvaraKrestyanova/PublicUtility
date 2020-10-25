@@ -1,2 +1,5 @@
 # Project exclude paths
 /target/
+
+git checkout master
+git merge style
