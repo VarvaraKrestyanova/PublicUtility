@@ -23,8 +23,4 @@ public class Bee {
         beeNectarValue += (makeBabyNectar + coordinationNectar + dieNectar + workNectar) * count;
         return beeNectarValue;
     }
-
-    /*public int getBeeNectarValue() {
-        return beeNectarValue;
-    }*/
 }

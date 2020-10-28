@@ -13,6 +13,7 @@ public class MainClass {
 
         int hiveNectarValue = 10000;
 
+
         QueenBee queenBee = new QueenBee();
         queenBee.beeNectar(true, true, false, false, 1);
 
