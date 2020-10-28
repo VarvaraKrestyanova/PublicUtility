@@ -31,7 +31,7 @@ public class Solution {
         ObjectMapper mapper = new ObjectMapper();
         BankData[] asArray = mapper.readValue(json, BankData[].class);
 
-        for (int i = 1; i < asArray.length; i++){
+        for (int i = 0; i < asArray.length; i++){
             String abbreviation = asArray[i].cur_Abbreviation;
             double officialRate = asArray[i].cur_OfficialRate;
             double result = totalTax * officialRate;
