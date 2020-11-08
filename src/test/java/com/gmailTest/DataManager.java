@@ -2,37 +2,22 @@ package com.gmailTest;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
+
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 @Data
 @Accessors(chain = true)
 public class DataManager {
 
-    /*public User getValidUser(){
-        User t = (User) readFromFile("yyy");
-        return null;
-    }*/
-
     @DataProvider
-    public Object[][] dataForInput(){
-
-        Object[][] data = new Object[3][1];
-        data[0][0] = "***@mail.ru";
-        data[1][0] = "123qwe";
-        data[2][0] = "Hi! How are u doing?";
-
-        /*
-        Object[][] data = new Object[3][2];
-        data[0][0] = "***@mail.ru";
-        data[0][1] = true;
-
-        data[1][0] = "123qwe";
-        data[1][1] = true;
-
-        data[2][0] = "Hi! How are u doing?";
-        data[2][1] = true;*/
-
-        return data;
+    public Object[] dataForInput(String login, String password){
+        open("https://mail.ru/");
+        $(By.cssSelector("[name='login']")).setValue(login).pressEnter();
+        $(By.cssSelector("[name='password']")).setValue(password).pressEnter();
+        return new Object[0];
     }
 
 }
