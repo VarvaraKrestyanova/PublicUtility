@@ -1,5 +1,6 @@
 package com.gmailTest;
 
+import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -37,6 +38,7 @@ public class Mail {
         $(By.cssSelector("[name='Subject']")).setValue((String) data[0]);
         $(By.cssSelector("div.editable-fxkl > div:nth-of-type(2)")).setValue((String) data[1]);
         $(By.cssSelector("span[tabindex='570'] > .button2__txt")).click();
+        Configuration.timeout = 6000;
 
         open("https://e.mail.ru/inbox/");
         $(By.cssSelector("div._1lwCBvq0cmXim-ZbQkhI4Z > div:nth-of-type(2) > .LG-qpXXxvyWu6jdl5Gi7J")).click();
