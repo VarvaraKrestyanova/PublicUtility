@@ -1,0 +1,360 @@
+[1604303382.890][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 7208
+[1604303382.890][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1604303383.544][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "D:\\work\\issoft\\proga\\PublicUtility\\build\\downloads\\1604303381805_74400_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "D:\\work\\issoft\\proga\\PublicUtility\\build\\downloads\\1604303381805_74400_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1604303383.549][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "D:\\work\\issoft\\proga\\PublicUtility\\build\\downloads\\1604303381805_74400_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1604303383.550][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1604303383.550][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\Varvara\AppData\Local\Temp\scoped_dir73724_868157821" data:,
+[1604303384.082][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1604303386.102][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1604303388.151][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "86.0.4240.111",
+      "chrome": {
+         "chromedriverVersion": "86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378})",
+         "userDataDir": "C:\\Users\\Varvara\\AppData\\Local\\Temp\\scoped_dir73724_868157821"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:1580"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "9dd479cf963751aa0e6ed7699894c7a4"
+}
+[1604303388.199][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1604303388.199][INFO]: Waiting for pending navigations...
+[1604303388.200][INFO]: Done waiting for pending navigations. Status: ok
+[1604303388.317][INFO]: Waiting for pending navigations...
+[1604303388.318][INFO]: Done waiting for pending navigations. Status: ok
+[1604303388.318][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE SetWindowRect {
+   "height": 768,
+   "width": 1366,
+   "x": 10,
+   "y": 10
+}
+[1604303388.339][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1604303388.339][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE SetTimeouts
+[1604303388.369][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND Navigate {
+   "url": "https://e-dostavka.by/"
+}
+[1604303388.369][INFO]: Waiting for pending navigations...
+[1604303388.370][INFO]: Done waiting for pending navigations. Status: ok
+[1604303388.601][INFO]: Waiting for pending navigations...
+[1604303391.003][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.004][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE Navigate
+[1604303391.085][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303391.085][INFO]: Waiting for pending navigations...
+[1604303391.085][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.094][INFO]: Waiting for pending navigations...
+[1604303391.095][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.095][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303391.350][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303391.350][INFO]: Waiting for pending navigations...
+[1604303391.351][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.355][INFO]: Waiting for pending navigations...
+[1604303391.355][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.355][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303391.586][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303391.586][INFO]: Waiting for pending navigations...
+[1604303391.587][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.591][INFO]: Waiting for pending navigations...
+[1604303391.592][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.592][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303391.822][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303391.822][INFO]: Waiting for pending navigations...
+[1604303391.822][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.827][INFO]: Waiting for pending navigations...
+[1604303391.828][INFO]: Done waiting for pending navigations. Status: ok
+[1604303391.828][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303392.055][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303392.055][INFO]: Waiting for pending navigations...
+[1604303392.055][INFO]: Done waiting for pending navigations. Status: ok
+[1604303392.061][INFO]: Waiting for pending navigations...
+[1604303392.061][INFO]: Done waiting for pending navigations. Status: ok
+[1604303392.061][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303392.293][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303392.293][INFO]: Waiting for pending navigations...
+[1604303392.294][INFO]: Done waiting for pending navigations. Status: ok
+[1604303392.298][INFO]: Waiting for pending navigations...
+[1604303392.298][INFO]: Done waiting for pending navigations. Status: ok
+[1604303392.298][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303392.539][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303392.540][INFO]: Waiting for pending navigations...
+[1604303392.540][INFO]: Done waiting for pending navigations. Status: ok
+[1604303392.544][INFO]: Waiting for pending navigations...
+[1604303392.545][INFO]: Done waiting for pending navigations. Status: ok
+[1604303392.545][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303392.772][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303392.772][INFO]: Waiting for pending navigations...
+[1604303392.773][INFO]: Done waiting for pending navigations. Status: ok
+[1604303392.779][INFO]: Waiting for pending navigations...
+[1604303392.779][INFO]: Done waiting for pending navigations. Status: ok
+[1604303392.779][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303393.008][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303393.008][INFO]: Waiting for pending navigations...
+[1604303393.009][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.013][INFO]: Waiting for pending navigations...
+[1604303393.013][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.013][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303393.243][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303393.243][INFO]: Waiting for pending navigations...
+[1604303393.244][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.248][INFO]: Waiting for pending navigations...
+[1604303393.248][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.248][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303393.493][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303393.493][INFO]: Waiting for pending navigations...
+[1604303393.494][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.498][INFO]: Waiting for pending navigations...
+[1604303393.498][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.498][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303393.730][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303393.730][INFO]: Waiting for pending navigations...
+[1604303393.731][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.734][INFO]: Waiting for pending navigations...
+[1604303393.735][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.735][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303393.960][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303393.960][INFO]: Waiting for pending navigations...
+[1604303393.961][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.965][INFO]: Waiting for pending navigations...
+[1604303393.965][INFO]: Done waiting for pending navigations. Status: ok
+[1604303393.965][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303394.201][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303394.202][INFO]: Waiting for pending navigations...
+[1604303394.202][INFO]: Done waiting for pending navigations. Status: ok
+[1604303394.206][INFO]: Waiting for pending navigations...
+[1604303394.206][INFO]: Done waiting for pending navigations. Status: ok
+[1604303394.206][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303394.442][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303394.442][INFO]: Waiting for pending navigations...
+[1604303394.443][INFO]: Done waiting for pending navigations. Status: ok
+[1604303394.447][INFO]: Waiting for pending navigations...
+[1604303394.448][INFO]: Done waiting for pending navigations. Status: ok
+[1604303394.448][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303394.685][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303394.685][INFO]: Waiting for pending navigations...
+[1604303394.685][INFO]: Done waiting for pending navigations. Status: ok
+[1604303394.689][INFO]: Waiting for pending navigations...
+[1604303394.689][INFO]: Done waiting for pending navigations. Status: ok
+[1604303394.689][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303394.922][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"
+}
+[1604303394.922][INFO]: Waiting for pending navigations...
+[1604303394.922][INFO]: Done waiting for pending navigations. Status: ok
+[1604303394.926][INFO]: Waiting for pending navigations...
+[1604303394.927][INFO]: Done waiting for pending navigations. Status: ok
+[1604303394.927][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"body.direction_1.section_1.not_authorized:nth-child(2) div.main__wrap div.main:nth-child(4) div.main_menu:nth-child(2) div.main_menu__inner nav:nth-child(1) ul:nth-child(1) li:nth-child(9) a:nth-child(1) > i.fa.fa-search"}
+  (Session info: chrome=86.0.4240.111)
+[1604303395.162][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "var source = document.documentElement.outerHTML; \nif (!source) { source = new XMLSerializer().serializeToString(document); }\nreturn source;"
+}
+[1604303395.162][INFO]: Waiting for pending navigations...
+[1604303395.162][INFO]: Done waiting for pending navigations. Status: ok
+[1604303395.174][INFO]: Waiting for pending navigations...
+[1604303395.175][INFO]: Done waiting for pending navigations. Status: ok
+[1604303395.175][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE ExecuteScript "\u003Chtml lang=\"ru\" class=\"desktop landscape ready no-touch\">\u003Chead>    \u003Ctitle>Продукты питания и промышленные товары с доставкой на дом и в офис\u003C/..."
+[1604303395.230][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND Screenshot {
+
+}
+[1604303395.230][INFO]: Waiting for pending navigations...
+[1604303395.230][INFO]: Done waiting for pending navigations. Status: ok
+[1604303395.632][INFO]: Waiting for pending navigations...
+[1604303395.632][INFO]: Done waiting for pending navigations. Status: ok
+[1604303395.633][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABUYAAAKoCAYAAAC7qCUdAAAAAXNSR0IArs4c6QAAIABJREFUeJzsnXtYVNX+/1+ooMJwvAACXsELhqmAciSvmJqBmSWSpeTxeDl2sa9mevyVkpGBlWWmJ+tomZmpZYhlJmRq4o2DBwXEJEUFvAEhXo4Diqj8/tiz9+w9zMCAKKDr9..."
+[1604303395.764][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] COMMAND Quit {
+
+}
+[1604303395.796][INFO]: [9dd479cf963751aa0e6ed7699894c7a4] RESPONSE Quit

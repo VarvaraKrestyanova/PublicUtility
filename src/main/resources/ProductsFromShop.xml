@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuperTestSuite">
+
+    <parameter name="rubles" value="13"></parameter>
+    <parameter name="penny" value="55"></parameter>
+
+
+    <test name="Store Test">
+        <classes>
+            <class name="com.publicUtility.EDostavka"/>
+        </classes>
+    </test>
+
+</suite>
