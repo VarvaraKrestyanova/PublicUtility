@@ -27,31 +27,21 @@ package com.MyTests;
 */
 
 class Solution {
+    public static int min(int a, int b, int c) {
+        if ((a < b) & (a < c)){
+            return a;
+        }else if ((b < a) & (b < c)){
+            return b;
+        }else{
+            return c;
+        }
+    }
+
     public static void main(String[] args) {
-        Cat cat = new Cat();
-        Dog dog = new Dog();
-        Fish fish = new Fish();
-        Woman woman = new Woman();
-        cat.owner = woman;
-        dog.owner = woman;
-        fish.owner = woman;
-
-
-    }
-
-    public static class Cat {
-        public Woman owner;
-    }
-
-    public static class Dog {
-        public Woman owner;
-    }
-
-    public static class Fish {
-        public Woman owner;
-    }
-
-    public static class Woman {
+        System.out.println(min(1, 2, 3));
+        System.out.println(min(-1, -2, -3));
+        System.out.println(min(3, 5, 3));
+        System.out.println(min(5, 5, 10));
     }
 }
 
