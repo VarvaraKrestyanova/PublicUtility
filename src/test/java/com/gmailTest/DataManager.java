@@ -23,7 +23,7 @@ public class DataManager {
 
         /*
         Object[][] data = new Object[3][2];
-        data[0][0] = "varlu@mail.ru";
+        data[0][0] = "***@mail.ru";
         data[0][1] = true;
 
         data[1][0] = "123qwe";
