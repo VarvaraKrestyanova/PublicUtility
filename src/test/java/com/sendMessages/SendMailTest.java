@@ -15,7 +15,6 @@ public class SendMailTest {
     SelenideElement firstFieldBody = $x("//div[@class='editable-iunl cke_editable cke_editable_inline cke_contents_true cke_show_borders']");
 
     String anyLogin = "";
-    String anyPassword = "";
     String anyTitle = "";
     String anyBody = "";
 

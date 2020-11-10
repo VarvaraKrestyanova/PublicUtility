@@ -66,13 +66,13 @@ public class DataReader {
             String bodies = "";
             Iterator i = messagesArray.iterator();
 
-            message = new Object[3][messagesCount];
+            message = new Object[messagesCount][3];
             int y = 0;
             for (int z = 0; z < messagesCount; z++) {
                 JSONObject messagesObj = (JSONObject) i.next();
-                message[0][y] = messagesObj.get("recipient");
-                message[1][y] = messagesObj.get("title");
-                message[2][y] = messagesObj.get("body");
+                message[y][0] = messagesObj.get("recipient");
+                message[y][1] = messagesObj.get("title");
+                message[y][2] = messagesObj.get("body");
                 y += 1;
             }
 
