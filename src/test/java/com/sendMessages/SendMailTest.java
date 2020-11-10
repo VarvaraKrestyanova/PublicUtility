@@ -12,6 +12,7 @@ public class SendMailTest {
     SelenideElement writeMessageButton = $(".compose-button__txt");
     SelenideElement toWhomField = $(".NHKrFD6");
     SelenideElement topicButton = $(By.cssSelector("label--2gJqH"));
+    SelenideElement firstFieldBody = $x("//div[@class='editable-iunl cke_editable cke_editable_inline cke_contents_true cke_show_borders']");
 
     String anyLogin = "";
     String anyPassword = "";
@@ -22,6 +23,7 @@ public class SendMailTest {
         writeMessageButton.click();
         toWhomField.setValue(anyLogin);
         topicButton.setValue(anyTitle);
+        firstFieldBody.setValue(anyBody);
     }
 
     //START TESTS-------------------------------------------------
