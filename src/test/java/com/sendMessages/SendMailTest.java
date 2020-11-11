@@ -17,7 +17,7 @@ public class SendMailTest {
     //START TEST-------------------------------------------------
 
     @Test(dataProvider = "message", dataProviderClass = DataReader.class)
-    public void test(String recipient, String title, String body, String id, String randomFunnyName) {
+    public void test(String recipient, String title, String body, String id) {
 
         loginPage.loginToMail();
         mailClientPage.writeAndSendMail(recipient, title, body);
