@@ -1,12 +1,12 @@
 package com.sendMessages;
 
+import com.github.javafaker.Faker;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.DataProvider;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
@@ -15,7 +15,6 @@ public class DataReader {
 
     private static final String filePath = "src/test/resources/message.json";
 
-    @DataProvider
     public Object[][] sender() {    //args: String login, String password
 
         Object[][] sendData = new Object[0][];
@@ -35,11 +34,7 @@ public class DataReader {
             sendData[0][0] = login;
             sendData[0][1] = password;
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
 
@@ -51,36 +46,34 @@ public class DataReader {
 
         Object[][] message = new Object[0][0];
         try {
-            //считывание файла. как избежать дублирования?
+            //считывание файла.
             FileReader reader = new FileReader(filePath);
 
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
 
-            // получение массива
+            //создание факера
+            Faker faker = new Faker();
+
+            //получение массива
             JSONArray messagesArray = (JSONArray) jsonObject.get("messages");
             int messagesCount = messagesArray.size();
-            System.out.println(messagesCount);
-            String recipients = "";
-            String titles = "";
-            String bodies = "";
             Iterator i = messagesArray.iterator();
 
-            message = new Object[messagesCount][3];
+            message = new Object[messagesCount][5];
             int y = 0;
             for (int z = 0; z < messagesCount; z++) {
                 JSONObject messagesObj = (JSONObject) i.next();
                 message[y][0] = messagesObj.get("recipient");
-                message[y][1] = messagesObj.get("title");
-                message[y][2] = messagesObj.get("body");
+                String id = faker.idNumber().valid();
+                message[y][1] = id + ": " + messagesObj.get("title");
+                String randomFunnyName = faker.funnyName().name();
+                message[y][2] = messagesObj.get("body") + " Are you " + randomFunnyName + "?";
+                message[y][3] = id;
                 y += 1;
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
 
@@ -88,13 +81,3 @@ public class DataReader {
     }
 
 }
-
-            /*while (i.hasNext()){
-                JSONObject messagesObj = (JSONObject) i.next();
-                recipients += (String) messagesObj.get("recipient") + ",";
-                titles += (String) messagesObj.get("title") + ",";
-                bodies += (String) messagesObj.get("body") + ",";
-                System.out.println(recipients);
-                System.out.println(titles);
-                System.out.println(bodies);
-            }*/
