@@ -1,0 +1,18 @@
+{
+  "title": "Dropdown List",
+  "values":
+  [
+    {
+      "name": "Please select an option",
+      "enabled": "False"
+    },
+    {
+      "name": "Option 1",
+      "enabled": "True"
+    },
+    {
+      "name": "Option 2",
+      "enabled": "True"
+    }
+  ]
+}
