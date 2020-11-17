@@ -12,6 +12,11 @@ public class DropdownDataManager {
 
     private static String filePath = "src/test/resources/dropdownList";
     ObjectMapper mapper = new ObjectMapper();
+    DropdownPageData dropdownPageData = getDropdownData();
+
+    public DropdownDataManager() throws IOException {
+    }
+
 
     private DropdownPageData getDropdownData() throws IOException {
         DropdownPageData dropdownPageData = mapper.readValue(Paths.get(filePath).toFile(), DropdownPageData.class);
@@ -20,10 +25,10 @@ public class DropdownDataManager {
 
     @DataProvider
     public Object[][] dropdownValuesFromFile() throws IOException{
-        DropdownPageData dropdownPageData = getDropdownData();
-        Object[][] valuesData = new Object[dropdownPageData.getValues().size()][1];
-        for(int i = 0; i < dropdownPageData.getValues().size(); i++){
-            DropdownValues v = dropdownPageData.getValues().get(i);
+
+        Object[][] valuesData = new Object[dropdownPageData.values.size()][1];
+        for(int i = 0; i < dropdownPageData.values.size(); i++){
+            DropdownValues v = dropdownPageData.values.get(i);
             valuesData[i][0] = v;
         }
         return valuesData;
@@ -33,7 +38,7 @@ public class DropdownDataManager {
     public Object[][] dropdownTitleFromFile() throws IOException{
         DropdownPageData dropdownPageData = getDropdownData();
         Object[][] pageData = new Object[1][1];
-        pageData[0][0] = dropdownPageData.getTitle();
+        pageData[0][0] = dropdownPageData.title;
         return pageData;
     }
 

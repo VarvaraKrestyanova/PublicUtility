@@ -3,29 +3,25 @@ package com.herokuapp;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class DropdownListPageObject{
-     //implements OnFooterVerifier ???
-    /*@Override
-    public String relativeUrl(){}    */
 
     SelenideElement dropdownBar = $("#dropdown");
-    static ElementsCollection dropdownListValues = $$("[value]");
-    SelenideElement disabledValue = $("[disabled]");
+    ElementsCollection dropdownListValues = $$("[value]");
 
-    //optionValue.has(Condition.not(Condition.text("Please select an option")))
-
-    public List<String> chooseListValues(){
-        List<String>listOfValues = null;
+    public String chooseListValues(){
+        List<String>listOfValues = new ArrayList<>();
         dropdownBar.click();
         for (SelenideElement optionValue : dropdownListValues){
             listOfValues.add(optionValue.getText());
         }
-        return listOfValues;
+        String list = String.valueOf(listOfValues);
+        return list;
         }
 
 }
