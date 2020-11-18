@@ -11,15 +11,23 @@ public class DropdownDataManager {
     //DROPDOWN PAGE DATA------------------------------
 
     private static String filePath = "src/test/resources/dropdownList";
-    ObjectMapper mapper = new ObjectMapper();
-    DropdownPageData dropdownPageData = getDropdownData();
+    static ObjectMapper mapper = new ObjectMapper();
+    static DropdownPageData dropdownPageData;
+
+    static {
+        try {
+            dropdownPageData = getDropdownData();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public DropdownDataManager() throws IOException {
     }
 
 
-    private DropdownPageData getDropdownData() throws IOException {
-        DropdownPageData dropdownPageData = mapper.readValue(Paths.get(filePath).toFile(), DropdownPageData.class);
+    private static DropdownPageData getDropdownData() throws IOException {
+        dropdownPageData = mapper.readValue(Paths.get(filePath).toFile(), DropdownPageData.class);
         return dropdownPageData;
     }
 
@@ -27,8 +35,8 @@ public class DropdownDataManager {
     public Object[][] dropdownValuesFromFile() throws IOException{
 
         Object[][] valuesData = new Object[dropdownPageData.values.size()][1];
-        for(int i = 0; i < dropdownPageData.values.size(); i++){
-            DropdownValues v = dropdownPageData.values.get(i);
+        for(int i = 0; i < dropdownPageData.getValues().size(); i++){
+            DropdownValues v = dropdownPageData.getValues().get(i);
             valuesData[i][0] = v;
         }
         return valuesData;
@@ -36,19 +44,10 @@ public class DropdownDataManager {
 
     @DataProvider
     public Object[][] dropdownTitleFromFile() throws IOException{
-        DropdownPageData dropdownPageData = getDropdownData();
+        dropdownPageData = getDropdownData();
         Object[][] pageData = new Object[1][1];
-        pageData[0][0] = dropdownPageData.title;
+        pageData[0][0] = dropdownPageData.getTitle();
         return pageData;
-    }
-
-    //FOOTER DATA--------------------------
-    @DataProvider
-    private Object[][] parseLocaleData() {
-        return new Object[][]{
-                {new DropdownListPageObject()}//,
-                //{new ()}
-        };
     }
 
 }

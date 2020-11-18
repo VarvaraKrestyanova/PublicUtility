@@ -11,17 +11,21 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class DropdownListPageObject{
 
+    public SelenideElement getTitleOnPage() {
+        return titleOnPage;
+    }
+
+    SelenideElement titleOnPage = $("h3");
     SelenideElement dropdownBar = $("#dropdown");
     ElementsCollection dropdownListValues = $$("[value]");
 
-    public String chooseListValues(){
+    public List<String> getActualDropdownValues(){
         List<String>listOfValues = new ArrayList<>();
         dropdownBar.click();
         for (SelenideElement optionValue : dropdownListValues){
             listOfValues.add(optionValue.getText());
         }
-        String list = String.valueOf(listOfValues);
-        return list;
+        return listOfValues;
         }
 
 }

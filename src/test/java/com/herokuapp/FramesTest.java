@@ -1,9 +1,11 @@
 package com.herokuapp;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -13,11 +15,8 @@ public class FramesTest {
 
     SelenideElement frameLink =  $("a[href='/iframe']");
     SelenideElement popupOkButton = $x("//button[.='Ok']");
-    SelenideElement inputField = $("#tinymce");
-    SelenideElement formatsButton = $("#mceu_2-open span");
-    SelenideElement headingButton =$x("//span[.='Headings']");
-    SelenideElement headingFirst = $("//span[.='Heading 1']");
-    SelenideElement nameOfH = $(".mce-path-item");
+    SelenideElement frameElement = $("#mce_0_ifr");
+    SelenideElement frameInputField = $("#tinymce p");
 
     @BeforeMethod
     protected void beforeTest() {
@@ -25,28 +24,30 @@ public class FramesTest {
     }
 
     @Test
-    public void boldTextCheck(){
+    public void iFrameTextCheck(){
+
+        String expectedMessage = "Your content goes here.";
+
         frameLink.click();
         popupOkButton.click();
-        formatsButton.click();
-        headingButton.click();
-        headingFirst.click();
-        nameOfH.shouldHave(Condition.exactText("h1"));
+        Selenide.switchTo().frame(frameElement);
+        String actualMessage = frameInputField.getText();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(expectedMessage, actualMessage);
+        softAssert.assertAll();
     }
 
     @Test
-    public void iFrameInputCheck(){
+    public void iFrameInputTextCheck(){
 
-        String message = "New message for the input!";
+        String messageForInput = "Let's check this frame!";
 
         frameLink.click();
         popupOkButton.click();
-        inputField.clear();
-        inputField.setValue(message);
-        inputField.shouldHave(Condition.exactText(message));
-
-        //WebDriver driver = new ChromeDriver();
-        //driver.switchTo().frame(inputField);
+        Selenide.switchTo().frame(frameElement);
+        frameInputField.clear();
+        frameInputField.sendKeys(messageForInput);
+        frameInputField.shouldHave(Condition.exactText(messageForInput));
     }
 
 }

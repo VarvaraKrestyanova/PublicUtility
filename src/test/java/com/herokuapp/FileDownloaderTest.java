@@ -1,6 +1,7 @@
 package com.herokuapp;
 
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -27,11 +28,21 @@ public class FileDownloaderTest extends FooterTest {
     @Test
     public void downloadFilesCheck() throws InterruptedException, FileNotFoundException {
 
+        SoftAssert softAssert = new SoftAssert();
+
         for (SelenideElement oneFile : allFiles) {
+
             File file = oneFile.download();
-            Thread.sleep(6000);
-            SoftAssert softAssert = new SoftAssert();
+            long expectedSize = file.length();
+
+            File fileDownloaded = new File(file.getPath());
+            long actualSize = fileDownloaded.length();
+
+            Selenide.sleep(6000);
+
             softAssert.assertTrue(file.getPath().contains(oneFile.getText()));
+            softAssert.assertEquals(expectedSize, actualSize);
+            softAssert.assertAll();
         }
     }
 

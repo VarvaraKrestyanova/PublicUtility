@@ -1,15 +1,13 @@
 package com.herokuapp;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import static com.codeborne.selenide.Selenide.$;
+import java.util.List;
 
 public class DropdownListTest extends FooterTest {
-    SelenideElement titleOnPage = $("h3");
 
     MainPage mainPage = new MainPage();
     DropdownListPageObject dropdownListPageObject = new DropdownListPageObject();
@@ -23,7 +21,7 @@ public class DropdownListTest extends FooterTest {
     @Test(dataProvider = "dropdownTitleFromFile", dataProviderClass = DropdownDataManager.class)
     public void titleTextCheck(DropdownPageData dropdownPageData){
 
-        titleOnPage.shouldHave(Condition.text(dropdownPageData.title));
+        dropdownListPageObject.getTitleOnPage().shouldHave(Condition.text(dropdownPageData.getTitle()));
     }
 
     //проверка текста в дропдауне
@@ -31,8 +29,9 @@ public class DropdownListTest extends FooterTest {
     public void selectValueCheck(DropdownValues dropdownValues){
 
         SoftAssert softAssert = new SoftAssert();
-        String actualName = dropdownListPageObject.chooseListValues();
-        softAssert.assertTrue(actualName.contains(dropdownValues.name));
+        List actualName = dropdownListPageObject.getActualDropdownValues();
+        softAssert.assertTrue(actualName.contains(dropdownValues.getName()));
+        softAssert.assertAll();
     }
 
 }

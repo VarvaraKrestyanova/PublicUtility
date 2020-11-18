@@ -12,6 +12,7 @@ public class KeyPressesTest {
 
     MainPage mainPage = new MainPage();
     SelenideElement inputField = $("#target");
+    SelenideElement pageBody = $("body");
     SelenideElement resultOnScreen = $("#result");
 
     @BeforeMethod
@@ -32,8 +33,7 @@ public class KeyPressesTest {
     public void pressedKeyCheck(){
 
         Keys key = Keys.ENTER;
-        inputField.sendKeys(Keys.chord(key));
+        pageBody.sendKeys(Keys.chord(key));
         resultOnScreen.shouldHave(Condition.exactText("You entered: " + key.name()));
-
     }
 }
